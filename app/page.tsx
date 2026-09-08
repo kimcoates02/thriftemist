@@ -366,23 +366,53 @@ export default function Home() {
 
             </a>
 
+            {/* X */}
 
-            {/* Phone */}
+<a
+  href="https://x.com/THRIFTEMIST"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Follow THRIFTEMIST on X"
+  className="flex items-center justify-between border-t border-black/15 py-6 transition-opacity hover:opacity-60"
+>
+  <span className="flex items-center gap-4">
+    <span className="text-lg font-medium leading-none">𝕏</span>
+    X
+  </span>
 
-            <a
-              href="tel:+917006322899"
-              aria-label="Call THRIFTEMIST"
-              className="flex items-center justify-between border-t border-black/15 py-6 transition-opacity hover:opacity-60"
-            >
+  <ArrowUpRight size={17} strokeWidth={1.4} />
+</a>
 
-              <span className="flex items-center gap-4">
-                <Phone size={18} strokeWidth={1.4} />
-                +91 70063 22899
-              </span>
+            {/* Phone 1 */}
 
-              <ArrowUpRight size={17} strokeWidth={1.4} />
+<a
+  href="tel:+917006322899"
+  aria-label="Call THRIFTEMIST on 70063 22899"
+  className="flex items-center justify-between border-t border-black/15 py-6 transition-opacity hover:opacity-60"
+>
+  <span className="flex items-center gap-4">
+    <Phone size={18} strokeWidth={1.4} />
+    +91 70063 22899
+  </span>
 
-            </a>
+  <ArrowUpRight size={17} strokeWidth={1.4} />
+</a>
+
+
+{/* Phone 2 */}
+
+<a
+  href="tel:+919796171768"
+  aria-label="Call THRIFTEMIST on 97961 71768"
+  className="flex items-center justify-between border-t border-black/15 py-6 transition-opacity hover:opacity-60"
+>
+  <span className="flex items-center gap-4">
+    <Phone size={18} strokeWidth={1.4} />
+    +91 97961 71768
+  </span>
+
+  <ArrowUpRight size={17} strokeWidth={1.4} />
+</a>
 
 
             {/* WhatsApp */}
