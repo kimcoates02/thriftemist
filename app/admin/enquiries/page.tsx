@@ -1,0 +1,2 @@
+import { supabaseAdmin } from "@/lib/supabase-admin";
+export default async function Page(){const {data}=await supabaseAdmin().from("enquiries").select("*").order("created_at",{ascending:false});return <div><h1 className="serif text-5xl">Enquiries</h1><pre className="mt-8 overflow-auto bg-[#F1EBDD] p-6 text-xs">{JSON.stringify(data||[],null,2)}</pre></div>}

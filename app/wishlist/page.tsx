@@ -1,0 +1,3 @@
+"use client";
+import { useEffect,useState } from "react"; import Link from "next/link";
+export default function Wishlist(){const [ids,setIds]=useState<string[]>([]);useEffect(()=>setIds(JSON.parse(localStorage.getItem("thritemist-wishlist")||"[]")),[]);return <div className="container py-16"><h1 className="serif text-6xl">My Wishlist</h1><p className="mt-6 text-sm text-black/50">Your saved pieces are stored in this browser. Sign in to persist them to your account.</p><Link href="/shop" className="mt-8 inline-block underline">Browse shop →</Link><div className="mt-8 text-sm">{ids.length} saved piece{ids.length===1?"":"s"}</div></div>}
