@@ -1,7 +1,5 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { CartProvider } from "@/components/cart-provider";
-import { SiteChrome } from "@/components/site-chrome";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://thriftemist.com"),
@@ -11,23 +9,19 @@ export const metadata: Metadata = {
   },
   description:
     "THRIFTEMIST — curated vintage, quality surplus and new clothing. Carefully selected pieces with limited availability.",
-  applicationName: "THRIFTEMIST",
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
-    type: "website",
-    siteName: "THRIFTEMIST",
     title: "THRIFTEMIST | Vintage, Surplus & New",
     description:
-      "Curated vintage, quality surplus and new clothing. Discover carefully selected pieces with limited availability.",
+      "Curated vintage, quality surplus and new clothing from Srinagar, Kashmir.",
     url: "https://thriftemist.com",
+    siteName: "THRIFTEMIST",
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "THRIFTEMIST | Vintage, Surplus & New",
     description:
-      "Curated vintage, quality surplus and new clothing.",
+      "Curated vintage, quality surplus and new clothing from Srinagar, Kashmir.",
   },
   robots: {
     index: true,
@@ -35,22 +29,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(() => { try { const saved = localStorage.getItem("thriftemist-theme"); const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches; document.documentElement.dataset.theme = saved || (systemDark ? "dark" : "light"); } catch (_) { document.documentElement.dataset.theme = "light"; } })()`,
-          }}
-        />
-      </head>
-      <body>
-  <CartProvider>
-    <SiteChrome />
-    <main>{children}</main>
-  </CartProvider>
-</body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
   );
 }
